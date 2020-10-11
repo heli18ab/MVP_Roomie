@@ -14,7 +14,8 @@ import * as firebase from 'firebase';
 
 
 
-// Denne TabNavigator holder styr på det yderste niveau af navigation i appen.
+// Denne TabNavigator holder styr på det ytterste nivået av navigasjon i appen. Det er altså menyen som ligger nede i systemet, og skal
+// hjelpe med å navigere.
 const TabNavigator = createBottomTabNavigator(
     {
         /*Tilføj routes*/
@@ -96,6 +97,11 @@ const AppBottomNav = createAppContainer(TabNavigator);
 
 
 
+//funksjonene nedenfor har tilhensikt å ta input fra inputfelt, og sjekke om dette stemmer med en bruker vi har i firebase, slik at
+//man skal få tilgang til programmet og systemet.
+
+//om man har tilgang loades også menyen som er laget over
+
 export default class SignIn extends Component {
 
     state = {
@@ -114,6 +120,7 @@ export default class SignIn extends Component {
             this.setState({ isLoggedIn: true });
         } catch (error) {
             console.log(error.message);
+            alert('Feil brukernavn eller passord')
             this.setState({ isLoggedIn: false });
         }
     };

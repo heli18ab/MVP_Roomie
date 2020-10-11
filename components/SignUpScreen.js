@@ -16,6 +16,8 @@ export default class SignUpScreen extends Component {
         Alert.alert('Credentials',` name: ${name} + email: ${email} + password: ${password}`);
     }
 
+
+    //her er kun design utviklet enn så lenge - ikke logikk. Lager input felt, som skal ta vare på fremtidige nye brukere.
     render() {
         return (
             <View style={styles.container}>
@@ -66,6 +68,8 @@ export default class SignUpScreen extends Component {
     }
 }
 
+
+//her legges style til
 const styles = StyleSheet.create({
     container: {
         flex: 1,

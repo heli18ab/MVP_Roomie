@@ -1,37 +1,20 @@
 import React, { Component } from 'react';
-import {
-    StyleSheet,
-    Text,
-    View
-} from 'react-native';
-import CalendarPicker from 'react-native-calendar-picker';
+import { Alert, Button, Text, TouchableOpacity, TextInput, View, StyleSheet } from 'react-native';
 
-export default class CalendarView extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            selectedStartDate: null,
-        };
-        this.onDateChange = this.onDateChange.bind(this);
-    }
 
-    onDateChange(date) {
-        this.setState({
-            selectedStartDate: date,
-        });
-    }
+
+//Her er det kun utviklet design. Viewet skal vise kalender, slik at alle har oversikt over
+//hva de ulike menneskene skal i kollektivet.
+export default class CalendarScreen extends Component {
+
+
     render() {
-        const { selectedStartDate } = this.state;
-        const startDate = selectedStartDate ? selectedStartDate.toString() : '';
         return (
             <View style={styles.container}>
-                <CalendarPicker
-                    onDateChange={this.onDateChange}
-                />
+                <Text style={styles.text}>Calendar</Text>
 
-                <View>
-                    <Text>SELECTED DATE:{ startDate }</Text>
-                </View>
+
+
             </View>
         );
     }
@@ -40,7 +23,19 @@ export default class CalendarView extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FFFFFF',
-        marginTop: 100,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#DBF1EE',
     },
+
+    text: {
+        fontSize: 70,
+        color:'#5FB8B2',
+        bottom:150,
+        right:20,
+    },
+
+
+
+
 });

@@ -13,6 +13,8 @@ import SignIn from "./components/SignIn";
 
 import firebase from 'firebase';
 
+
+//setter opp tilknytning til database, firebase
 const fireBaseConfig = {
     apiKey: "AIzaSyCSZ7E1KllQBWMjetSbqKmfW7_DdPtPYp4",
     authDomain: "ovelse5-ec2ee.firebaseapp.com",
@@ -23,13 +25,18 @@ const fireBaseConfig = {
     appId: "1:734463752384:web:1fc8dbf164eb8da1965525",
     measurementId: "G-RNNM8PEH2M"
 };
-// Vi kontrollerer at der ikke allerede er en initialiseret instans af firebase
-// Så undgår vi fejlen Firebase App named '[DEFAULT]' already exists (app/duplicate-app).
+
+
+// Her kontrolleres det at det ikke er intalisert instans av firebase
+
+
 if (!firebase.apps.length) {
     firebase.initializeApp(fireBaseConfig);
 }
 
 
+
+//her sier vi at det er SignIn viewet vi først skal se
 export default class App extends React.Component  {
     render(){
         return(
@@ -39,6 +46,7 @@ export default class App extends React.Component  {
 
 }
 
+//styles legges på
 const styles = StyleSheet.create({
     container: {
         flex: 1,

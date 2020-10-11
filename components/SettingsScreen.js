@@ -1,47 +1,39 @@
-import React, { Component } from 'react'
-import {View, Text, StyleSheet, Button} from 'react-native';
-import {createStackNavigator} from "react-navigation-stack";
+import React, { Component } from 'react';
+import { Alert, Button, Text, TouchableOpacity, TextInput, View, StyleSheet } from 'react-native';
 
 
 
-
+//Her er det ikke utviklet noe enda - men tanken er at det skal være et view, hvor
+//brukere kan endre passord, brukernavn eller andre opplysninger.
 export default class SettingsScreen extends Component {
-    static navigationOptions= {
-        title:'Settings'
-    }
-    handleGoToDetails = () => {
-        // Når en komponent bliver mounted via navigation, får den en prop ved navn "navigation" som indeholder funktioner mv. til at navigere i appen.
-        this.props.navigation.navigate('Details');
-    };
 
-    render(){
+
+    render() {
         return (
             <View style={styles.container}>
-                <Text style={styles.text}>Go to Details!</Text>
+                <Text style={styles.text}>Personal Settings</Text>
 
-                <Button style={styles.button} title="Take me there!" onPress={this.handleGoToDetails} />
             </View>
         );
-    };
+    }
 }
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop:100,
-        paddingBottom:100,
-        borderColor: 'green',
-        borderWidth: 20,
         flex: 1,
-        justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: 'white',
-        height:'100%'
-    },
-    text: {
-        fontSize: 20,
+        justifyContent: 'center',
+        backgroundColor: '#DBF1EE',
     },
 
-    button:{
-        backgroundColor:'pink',
+    text: {
+        fontSize: 70,
+        color:'#5FB8B2',
+        bottom:150,
+        right:20,
     },
+
+
+
+
 });

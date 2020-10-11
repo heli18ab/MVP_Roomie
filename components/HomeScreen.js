@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import {View, Text, StyleSheet, Button, TouchableOpacity} from 'react-native';
 
+
+
+//Home skal være en oversikt over de rengjøringsfunksjonene som appen kan tilgå.
+//Her er det per nå kun utviklet design, så det vil forekomme vidreutvikling
 export default class HomeScreen extends Component {
     render(){
         return (
